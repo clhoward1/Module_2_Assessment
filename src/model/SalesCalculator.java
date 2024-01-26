@@ -46,17 +46,25 @@ public class SalesCalculator {
 	
 	/**
 	 * Methods
+	 * 
+	 * Calculates sale price before tax is added
 	 */
 	public double calculateBeforeTaxSalePrice() {
 		double cost = (itemPrice * itemAmount);
 		return cost;
 	}
 	
+	/**
+	 * Calculates sale price with tax
+	 */
 	public double calculateAfterTaxSalePrice() {
 		double cost = (itemPrice * itemAmount);
 		return cost + (cost * SALES_TAX);
 	}
 	
+	/**
+	 * Checks to see if pre tax sale price is above limit to qualify for discount
+	 */
 	public boolean discountQualifier() {
 		double cost = (itemPrice * itemAmount);
 		
